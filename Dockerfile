@@ -16,7 +16,7 @@ RUN useradd -m -r service && \
     chown -R service:service /app
 USER service
 
-# Run the service on port 8000
-ENV PORT 8000
+# Run the service on port 8080
+ENV PORT 8080
 EXPOSE $PORT
-CMD ["gunicorn", "service:app", "--bind", "0.0.0.0:8000"]
+CMD ["gunicorn", "service:app", "--bind", "0.0.0.0:8080"]
